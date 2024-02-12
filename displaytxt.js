@@ -81,8 +81,10 @@ console.log(user2)
 
 let a 
 let b = null
-const arr =[ 1,4,7,8]
+const arr = [1,4,7,8]
 
 console.log(typeof(a))
 console.log(typeof(b))
 console.log(typeof arr)
+
+
