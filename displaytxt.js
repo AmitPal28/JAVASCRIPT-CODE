@@ -79,7 +79,7 @@ console.log(user2)
 
 
 
-let a 
+let a //undefined. 
 let b = null
 const arr = [1,4,7,8]
 
