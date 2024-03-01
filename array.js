@@ -10,7 +10,6 @@ const userNewArray = new Array(1,2,3,4)
 
 // ******************************************Some Object ************************************************
 
-
 const useArray = [2,4,6]
 useArray.push(8)  // Add last index element
 // console.log(`After applying push method of useArray is: ${useArray}`)
@@ -70,3 +69,74 @@ let placedStudIT = 50
 let placedStudCivil = 12
 let placedStudME = 24
 console.log(Array.of(placedStudIT,placedStudCivil,placedStudME))
+
+
+
+// Problem1 
+const students = [ {
+   firstName : "Amit",
+   lastName : "Pal",
+   course: "Information Technology",
+   rollNo: 4,
+   perObtain: 68.4,
+   wearAccessories : 3 
+},{
+    firstName : "Shivam",
+    lastName : "Seth",
+    course: "Information Technology",
+    rollNo: 51,
+    perObtain: 62,
+    wearAccessories : 4
+},{  
+    firstName : "Sanjeev",
+    lastName : "Shukla",
+    course: "Civil",
+    rollNo: 45,
+    perObtain: 73 ,
+    wearAccessories : 2
+} ]
+
+
+/* students.forEach( (student)=>{
+     return student;
+ }) */
+
+
+/* for (let student of students){
+    console.log(student)
+ }*/
+
+
+
+const eligibleForJob= students.filter((student)=>student.perObtain > 65)
+    
+   // if (student.perObtain > 65){
+   //     return true;
+   // }
+   // return false;
+
+console.log(eligibleForJob)
+
+const studentsName = students.map((student)=> `${student.firstName} ${student.lastName}`)
+console.log(`Fullname of students is: ${studentsName}`)
+
+
+const totalAccessories = students.reduce(( accumulator, student)=> {
+    accumulator += student.wearAccessories;
+    return accumulator;
+},0)
+console.log(`Total accessories of students is: ${totalAccessories}`)
+
+
+const getStudent = students.find((student) =>{
+    if(student.rollNo === 4){
+        return true;
+    }
+    return false; // if not present then show undefined
+})
+
+console.log(getStudent)
+
+const studentList = ["ankit",'akash','abhishek','amit','arvind']
+studentList.splice(2,3);
+console.log(`After applying splice method in studentList is: ${studentList}`)
